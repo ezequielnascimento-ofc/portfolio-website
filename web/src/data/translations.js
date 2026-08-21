@@ -8,11 +8,11 @@ export const LANGUAGES = [
 const SKILLS_SHARED = [
   {
     key: 'backend',
-    items: ['Java', 'Spring Boot', 'APIs REST', 'POO', 'SOLID', 'Clean Code', 'JUnit 5', 'TDD', 'DDD (fundamentos)'],
+    items: ['Java', 'Spring Boot', 'APIs REST', 'POO', 'SOLID', 'Clean Code', 'JUnit 5', 'TDD', 'DDD'],
   },
   {
     key: 'frontend',
-    items: ['Angular', 'React', 'JavaScript'],
+    items: ['Angular', 'React', 'JavaScript', 'Typescript', 'TailwindCSS'],
   },
   {
     key: 'data',
@@ -110,7 +110,6 @@ export const translations = {
             'Diagnóstico e correção de inconsistências em bancos de dados legados com migrations versionadas no Flyway, garantindo rastreabilidade das alterações.',
             'Conteinerização e modernização do ambiente DSpace 10 com Docker, incluindo customização de frontend e imagens próprias para deploy.',
             'Automação de ambientes e processos operacionais com Ansible, reduzindo trabalho manual e padronizando implantações.',
-            'Suporte técnico a hardware, software, redes e serviços institucionais, com apoio direto em implantações e resolução de incidentes.',
           ],
         },
         {

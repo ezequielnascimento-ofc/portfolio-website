@@ -184,11 +184,6 @@ button:focus-visible {
   color: var(--ink);
 }
 
-@media (max-width: 720px) {
-  .nav-links--desktop { display: none; }
-  .nav-toggle { display: flex; }
-  .lang-switch { display: none; }
-}
 
 /* ---------- Language switch ---------- */
 
@@ -232,6 +227,19 @@ button:focus-visible {
   margin: 4px 32px 20px;
 }
 
+@media (max-width: 720px) {
+  .nav-links--desktop { display: none; }
+  .nav-toggle { display: flex; }
+  .lang-switch { display: none; }
+  .lang-switch--mobile {
+    display: flex;
+    position: static;
+    transform: none;
+    align-self: flex-start;
+    margin: 4px 32px 20px;
+  }
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
@@ -272,7 +280,7 @@ button:focus-visible {
   object-fit: cover;
   object-position: center;
   display: block;
-  transform: scale(1.1);
+  transform: scale(1.15);
   transition: transform 0.6s var(--ease);
 }
 

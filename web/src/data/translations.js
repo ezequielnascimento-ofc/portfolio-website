@@ -58,7 +58,7 @@ const CERTIFICATIONS = [
 
 const CONTACT_BASE = {
   email: 'ezequielnascimento.ofc@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/SEU-USUARIO-AQUI',
+  linkedin: 'https://www.linkedin.com/in/ezequielmiguel/',
   github: 'https://github.com/ezequielnascimento-ofc',
 }
 

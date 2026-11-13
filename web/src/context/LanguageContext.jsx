@@ -1,11 +1,49 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
+import { content, LANGUAGES } from '../data/content.js'
 
 const LanguageContext = createContext(null)
+const STORAGE_KEY = 'lang'
+const HTML_LANG = { pt: 'pt-BR', en: 'en', es: 'es', fr: 'fr' }
+
+function initialLang() {
+  try {
+    const fromUrl = new URLSearchParams(window.location.search).get('lang')
+    if (fromUrl && content[fromUrl]) return fromUrl
+  } catch {
+    // URL sem parâmetros válidos
+  }
+  try {
+    const saved = window.localStorage.getItem(STORAGE_KEY)
+    if (saved && content[saved]) return saved
+  } catch {
+    // armazenamento indisponível: segue com o padrão
+  }
+  return 'pt'
+}
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('pt')
+  const [lang, setLangState] = useState(initialLang)
+
+  const setLang = (code) => {
+    if (!content[code]) return
+    setLangState(code)
+    try {
+      window.localStorage.setItem(STORAGE_KEY, code)
+    } catch {
+      // sem persistência, sem problema
+    }
+  }
+
+  useEffect(() => {
+    const t = content[lang]
+    document.documentElement.lang = HTML_LANG[lang]
+    document.title = t.meta.title
+    const desc = document.querySelector('meta[name="description"]')
+    if (desc) desc.setAttribute('content', t.meta.description)
+  }, [lang])
+
   return (
-    <LanguageContext.Provider value={{ lang, setLang }}>
+    <LanguageContext.Provider value={{ lang, setLang, t: content[lang], languages: LANGUAGES }}>
       {children}
     </LanguageContext.Provider>
   )

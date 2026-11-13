@@ -1,33 +1,82 @@
-import { useParallax } from '../hooks/useParallax.js'
-import { translations } from '../data/translations.js'
 import { useLanguage } from '../context/LanguageContext.jsx'
+import { TICKER } from '../data/content.js'
+import Header from './Header.jsx'
+
+function TickerRun({ hidden }) {
+  return (
+    <span className="ticker-run" aria-hidden={hidden || undefined}>
+      {TICKER.map((item) => (
+        <span key={item} className="ticker-item">
+          <span>{item}</span>
+          <span className="ticker-mark" aria-hidden="true">■</span>
+        </span>
+      ))}
+    </span>
+  )
+}
 
 export default function Hero() {
-  const photoRef = useParallax(0.14, 10)
-  const { lang } = useLanguage()
-  const t = translations[lang].hero
+  const { t } = useLanguage()
+  const h = t.hero
 
   return (
-    <header className="hero" id="topo">
-      <div className="hero-inner wrap">
-        <div className="hero-avatar">
-          <div className="hero-avatar-inner" ref={photoRef}>
-            <img src="/profile.jpg" alt={t.name} />
+    <section id="topo" className="hero">
+      <div className="hero-grid">
+        <div className="hero-main">
+          <Header />
+
+          <div className="hero-body">
+            <p className="hero-meta mono">
+              <span className="hero-role">
+                <span className="dot dot--live" aria-hidden="true" />
+                {h.role}
+              </span>
+              <span>{h.location}</span>
+            </p>
+
+            <h1 className={`hero-title ${h.title.length > 88 ? 'hero-title--long' : ''}`}>
+              {h.title}
+              <span className="accent">.</span>
+            </h1>
+
+            <div className="hero-actions">
+              <p className="hero-lead">{h.lead}</p>
+              <div className="btn-row">
+                <a className="btn btn--accent" href="#projetos">
+                  {h.ctaProjects} <span aria-hidden="true">↓</span>
+                </a>
+                <a className="btn btn--ghost" href="#contato">{h.ctaContact}</a>
+              </div>
+            </div>
           </div>
+
+          <ul className="hero-stats">
+            {h.stats.map((s) => (
+              <li key={s.label} className="stat">
+                <span className={`stat-value ${s.accent ? 'accent' : ''}`}>{s.value}</span>
+                <span className="stat-label">{s.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <h1>{t.name}</h1>
-        <p className="role">{t.role}</p>
-        <p className="lede">{t.lede}</p>
-        <div className="hero-actions">
-          <a className="btn btn-primary" href="#contato">{t.ctaContact}</a>
-          <a className="btn btn-secondary" href="#experiencia">{t.ctaExperience}</a>
+        <div className="hero-photo">
+          <img
+            src="/profile.jpg"
+            alt={h.photoAlt}
+            width="896"
+            height="1080"
+            fetchpriority="high"
+          />
         </div>
       </div>
 
-      <div className="hero-scroll-cue" aria-hidden="true">
-        <span />
+      <div className="ticker" role="region" aria-label={h.tickerLabel}>
+        <div className="ticker-track">
+          <TickerRun />
+          <TickerRun hidden />
+        </div>
       </div>
-    </header>
+    </section>
   )
 }

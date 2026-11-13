@@ -639,8 +639,37 @@ button {
 
 .chapter-foot {
   margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  align-items: center;
+  justify-content: space-between;
   font-size: 13px;
   color: var(--muted);
+}
+
+.btn--case {
+  white-space: nowrap;
+  min-height: 48px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: var(--fg);
+}
+
+.btn--dark {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.btn--dark:hover {
+  background: #2a2a2a;
+}
+
+.metric.metric--action {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  padding-right: 0;
+  border-left: 0;
 }
 
 .chapter-foot--rule {
@@ -1284,7 +1313,8 @@ button {
     border-left: 0;
   }
 
-  .metric--lead {
+  .metric--lead,
+  .metric--action {
     flex-basis: 100%;
   }
 

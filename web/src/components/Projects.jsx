@@ -30,6 +30,16 @@ function Statement({ parts, className = '' }) {
   )
 }
 
+// Estudos de caso ainda sem página: o botão existe, sem destino por enquanto.
+function CaseStudyButton({ variant = 'ghost' }) {
+  const { t } = useLanguage()
+  return (
+    <a className={`btn btn--case btn--${variant}`}>
+      {t.caseStudy} <span aria-hidden="true">→</span>
+    </a>
+  )
+}
+
 function Mcp() {
   const { t } = useLanguage()
   const m = t.mcp
@@ -85,6 +95,9 @@ function Mcp() {
               <span className="metric-label">{x.label}</span>
             </li>
           ))}
+          <li className="metric metric--action">
+            <CaseStudyButton />
+          </li>
         </ul>
       </div>
     </section>
@@ -107,9 +120,12 @@ function Perto() {
             </li>
           ))}
         </ol>
-        <p className="chapter-foot mono">
-          {p.footnote} · {STACKS.perto}
-        </p>
+        <div className="chapter-foot">
+          <p className="mono">
+            {p.footnote} · {STACKS.perto}
+          </p>
+          <CaseStudyButton variant="dark" />
+        </div>
       </div>
     </section>
   )
@@ -155,7 +171,10 @@ function Asces() {
           </article>
         </div>
 
-        <p className="chapter-foot chapter-foot--rule mono">{STACKS.asces}</p>
+        <div className="chapter-foot chapter-foot--rule">
+          <p className="mono">{STACKS.asces}</p>
+          <CaseStudyButton />
+        </div>
       </div>
     </section>
   )

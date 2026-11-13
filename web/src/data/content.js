@@ -170,6 +170,7 @@ export const content = {
       newTab: '(abre em nova aba)',
     },
     footer: { location: 'Caruaru, Pernambuco, Brasil' },
+    caseStudy: 'Ler estudo de caso',
   },
 
   en: {
@@ -299,6 +300,7 @@ export const content = {
       newTab: '(opens in a new tab)',
     },
     footer: { location: 'Caruaru, Pernambuco, Brazil' },
+    caseStudy: 'Read case study',
   },
 
   es: {
@@ -428,6 +430,7 @@ export const content = {
       newTab: '(se abre en una pestaña nueva)',
     },
     footer: { location: 'Caruaru, Pernambuco, Brasil' },
+    caseStudy: 'Leer estudio de caso',
   },
 
   fr: {
@@ -557,5 +560,6 @@ export const content = {
       newTab: '(s’ouvre dans un nouvel onglet)',
     },
     footer: { location: 'Caruaru, Pernambuco, Brésil' },
+    caseStudy: 'Lire l’étude de cas',
   },
 }

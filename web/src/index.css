@@ -54,6 +54,54 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Barra de rolagem: trilho preto e cursor laranja da marca */
+html {
+  scrollbar-gutter: stable;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-left: 1px solid var(--line);
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 56px;
+  background: var(--accent);
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-width: 3px;
+  background-color: #ff7440;
+}
+
+::-webkit-scrollbar-thumb:active {
+  border-width: 3px;
+  background-color: var(--fg);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
 body.menu-open {
   overflow: hidden;
 }

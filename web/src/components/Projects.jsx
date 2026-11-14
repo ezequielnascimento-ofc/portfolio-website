@@ -30,11 +30,11 @@ function Statement({ parts, className = '' }) {
   )
 }
 
-// Estudos de caso ainda sem página: o botão existe, sem destino por enquanto.
-function CaseStudyButton({ variant = 'ghost' }) {
+// Sem href, o caso ainda não tem página: o botão aparece sem destino.
+function CaseStudyButton({ variant = 'ghost', href }) {
   const { t } = useLanguage()
   return (
-    <a className={`btn btn--case btn--${variant}`}>
+    <a className={`btn btn--case btn--${variant}`} href={href}>
       {t.caseStudy} <span aria-hidden="true">→</span>
     </a>
   )
@@ -96,7 +96,7 @@ function Mcp() {
             </li>
           ))}
           <li className="metric metric--action">
-            <CaseStudyButton />
+            <CaseStudyButton href="/casos/plataforma-mcp/" />
           </li>
         </ul>
       </div>

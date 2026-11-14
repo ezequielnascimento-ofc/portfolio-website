@@ -60,7 +60,8 @@ function LanguageMenu({ onPick }) {
   )
 }
 
-export default function Header() {
+// home: na página inicial os links rolam até a seção; nas outras páginas, levam à inicial.
+export default function Header({ home = true }) {
   const { t } = useLanguage()
   const [open, setOpen] = useState(false)
 
@@ -74,16 +75,18 @@ export default function Header() {
     return () => document.removeEventListener('keydown', onKey)
   }, [open])
 
+  const base = home ? '' : '/'
   const links = [
-    { href: '#projetos', label: t.nav.projects },
-    { href: '#metodo', label: t.nav.method },
-    { href: '#experiencia', label: t.nav.experience },
+    { href: `${base}#projetos`, label: t.nav.projects },
+    { href: `${base}#metodo`, label: t.nav.method },
+    { href: `${base}#experiencia`, label: t.nav.experience },
+    // Toda página termina com a seção de contato.
     { href: '#contato', label: t.nav.contact },
   ]
 
   return (
     <header className="header">
-      <a className="brand" href="#topo">Ezequiel Nascimento</a>
+      <a className="brand" href={home ? '#topo' : '/'}>Ezequiel Nascimento</a>
       <nav aria-label={t.nav.main} className="nav">
         <ul className="nav-links">
           {links.map((l) => (

@@ -21,7 +21,8 @@ function initialLang() {
   return 'pt'
 }
 
-export function LanguageProvider({ children }) {
+// pageMeta (opcional): (lang) => { title, description } para páginas que não são a inicial.
+export function LanguageProvider({ children, pageMeta }) {
   const [lang, setLangState] = useState(initialLang)
 
   const setLang = (code) => {
@@ -35,12 +36,12 @@ export function LanguageProvider({ children }) {
   }
 
   useEffect(() => {
-    const t = content[lang]
+    const meta = pageMeta ? pageMeta(lang) : content[lang].meta
     document.documentElement.lang = HTML_LANG[lang]
-    document.title = t.meta.title
+    document.title = meta.title
     const desc = document.querySelector('meta[name="description"]')
-    if (desc) desc.setAttribute('content', t.meta.description)
-  }, [lang])
+    if (desc) desc.setAttribute('content', meta.description)
+  }, [lang, pageMeta])
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, t: content[lang], languages: LANGUAGES }}>

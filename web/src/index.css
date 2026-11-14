@@ -148,6 +148,11 @@ button {
   outline-color: var(--bg);
 }
 
+/* Seção focada pela navegação por âncora: sem contorno na seção inteira. */
+section[tabindex="-1"]:focus {
+  outline: none;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

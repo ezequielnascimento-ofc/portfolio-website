@@ -1,29 +1,8 @@
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { plataformaMcp } from '../../data/cases/plataformaMcp.js'
-import { CaseLayout, Decisions, Node, Roadmap, Section, Metrics } from './CaseParts.jsx'
+import { ArchSteps, CaseLayout, Decisions, Roadmap, Section, Metrics, SplitDiagram } from './CaseParts.jsx'
 
 const SECTION_IDS = ['contexto', 'problema', 'ferramentas', 'decisoes', 'arquitetura', 'seguranca', 'resultado', 'proximos']
-
-function Diagram({ a }) {
-  return (
-    <figure className="arch" role="img" aria-label={a.diagramLabel}>
-      <Node lines={a.nodes.client} />
-      <div className="arch-link">
-        <span className="arch-label mono">{a.links[0]}</span>
-      </div>
-      <Node lines={a.nodes.proxy} />
-      <div className="arch-link">
-        <span className="arch-label mono">{a.links[1]}</span>
-      </div>
-      <Node lines={a.nodes.platform} accent />
-      <div className="arch-split" />
-      <div className="arch-pair">
-        <Node lines={a.nodes.source} />
-        <Node lines={a.nodes.db} />
-      </div>
-    </figure>
-  )
-}
 
 export default function CasePlataformaMcp() {
   const { lang } = useLanguage()
@@ -77,15 +56,8 @@ export default function CasePlataformaMcp() {
 
       <Section id="arquitetura" n="05" title={s.arquitetura}>
         <div className="case-split">
-          <ol className="arch-steps">
-            {c.architecture.steps.map((step, i) => (
-              <li key={step}>
-                <span className="mono chapter-num">{String(i + 1).padStart(2, '0')}</span>
-                <p>{step}</p>
-              </li>
-            ))}
-          </ol>
-          <Diagram a={c.architecture} />
+          <ArchSteps steps={c.architecture.steps} />
+          <SplitDiagram a={c.architecture} />
         </div>
       </Section>
 

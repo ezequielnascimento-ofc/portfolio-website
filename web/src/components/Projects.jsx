@@ -173,7 +173,7 @@ function Asces() {
 
         <div className="chapter-foot chapter-foot--rule">
           <p className="mono">{STACKS.asces}</p>
-          <CaseStudyButton />
+          <CaseStudyButton href="/casos/asces-unita/" />
         </div>
       </div>
     </section>

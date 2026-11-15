@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { LanguageProvider } from './context/LanguageContext.jsx'
 import CasePlataformaMcp from './components/case/CasePlataformaMcp.jsx'
 import CaseAgendaPerto from './components/case/CaseAgendaPerto.jsx'
+import CaseAscesUnita from './components/case/CaseAscesUnita.jsx'
 import { plataformaMcp } from './data/cases/plataformaMcp.js'
 import { agendaPerto } from './data/cases/agendaPerto.js'
+import { ascesUnita } from './data/cases/ascesUnita.js'
 import './index.css'
 import { initAnchorScroll } from './anchorScroll.js'
 
@@ -12,6 +14,7 @@ import { initAnchorScroll } from './anchorScroll.js'
 const CASES = {
   'plataforma-mcp': { Page: CasePlataformaMcp, data: plataformaMcp },
   'agenda-perto': { Page: CaseAgendaPerto, data: agendaPerto },
+  'asces-unita': { Page: CaseAscesUnita, data: ascesUnita },
 }
 
 initAnchorScroll()

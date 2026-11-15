@@ -61,6 +61,41 @@ export function Node({ lines, accent = false }) {
   )
 }
 
+// Diagrama vertical: cliente → proxy → serviço principal (destaque) → dois destinos lado a lado.
+export function SplitDiagram({ a }) {
+  return (
+    <figure className="arch" role="img" aria-label={a.diagramLabel}>
+      <Node lines={a.nodes.client} />
+      <div className="arch-link">
+        <span className="arch-label mono">{a.links[0]}</span>
+      </div>
+      <Node lines={a.nodes.proxy} />
+      <div className="arch-link">
+        <span className="arch-label mono">{a.links[1]}</span>
+      </div>
+      <Node lines={a.nodes.platform} accent />
+      <div className="arch-split" />
+      <div className="arch-pair">
+        <Node lines={a.nodes.source} />
+        <Node lines={a.nodes.db} />
+      </div>
+    </figure>
+  )
+}
+
+export function ArchSteps({ steps }) {
+  return (
+    <ol className="arch-steps">
+      {steps.map((step, i) => (
+        <li key={step}>
+          <span className="mono chapter-num">{String(i + 1).padStart(2, '0')}</span>
+          <p>{step}</p>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
 export function Decisions({ intro, labels, rows }) {
   return (
     <>

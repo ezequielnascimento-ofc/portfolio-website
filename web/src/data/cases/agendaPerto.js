@@ -134,12 +134,12 @@ const pt = {
     stack: ['Java 21', 'Spring Boot 4', 'Spring Security', 'PostgreSQL 16 · RLS', 'Flyway', 'Angular 22', 'Tailwind CSS v4', 'Docker', 'GitHub Actions', 'Testcontainers', 'Cloudflare Zero Trust', 'Claude Code'],
   },
   nextCase: {
-    kicker: 'Próximo estudo de caso · em breve',
+    kicker: 'Próximo estudo de caso',
     number: '03',
     title: 'Sistemas da Asces-Unita',
     statement: ['O CPF nunca aparece na URL,', 'nos logs ou nas métricas.'],
-    cta: 'Ver todos os projetos',
-    href: '/#projetos',
+    cta: 'Ler estudo de caso',
+    href: '/casos/asces-unita/',
     theme: 'dark',
   },
 }
@@ -268,12 +268,12 @@ const en = {
     stack: ['Java 21', 'Spring Boot 4', 'Spring Security', 'PostgreSQL 16 · RLS', 'Flyway', 'Angular 22', 'Tailwind CSS v4', 'Docker', 'GitHub Actions', 'Testcontainers', 'Cloudflare Zero Trust', 'Claude Code'],
   },
   nextCase: {
-    kicker: 'Next case study · coming soon',
+    kicker: 'Next case study',
     number: '03',
     title: 'Asces-Unita systems',
     statement: ['The ID number never shows up in the URL,', 'the logs or the metrics.'],
-    cta: 'See all projects',
-    href: '/#projetos',
+    cta: 'Read case study',
+    href: '/casos/asces-unita/',
     theme: 'dark',
   },
 }

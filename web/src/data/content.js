@@ -107,7 +107,7 @@ export const content = {
     },
     perto: {
       title: 'Agenda Perto',
-      meta: 'Perto Plataforma · set/2026 – atual · em produção com o primeiro cliente',
+      meta: 'Perto Plataforma · set/2026 – atual · em produção',
       statement: ['Um filtro esquecido no código', 'não vaza dados.'],
       layers: [
         { label: 'Camada 1 · Aplicação', text: 'O cliente vem do token, nunca de um cabeçalho.' },
@@ -237,7 +237,7 @@ export const content = {
     },
     perto: {
       title: 'Agenda Perto',
-      meta: 'Perto Plataforma · Sep 2026 – present · in production with its first client',
+      meta: 'Perto Plataforma · Sep 2026 – present · in production',
       statement: ['A filter forgotten in the code', 'does not leak data.'],
       layers: [
         { label: 'Layer 1 · Application', text: 'The client comes from the token, never from a header.' },
@@ -367,7 +367,7 @@ export const content = {
     },
     perto: {
       title: 'Agenda Perto',
-      meta: 'Perto Plataforma · sep 2026 – actual · en producción con el primer cliente',
+      meta: 'Perto Plataforma · sep 2026 – actual · en producción',
       statement: ['Un filtro olvidado en el código', 'no filtra datos.'],
       layers: [
         { label: 'Capa 1 · Aplicación', text: 'El cliente viene del token, nunca de un encabezado.' },
@@ -497,7 +497,7 @@ export const content = {
     },
     perto: {
       title: 'Agenda Perto',
-      meta: 'Perto Plataforma · sept. 2026 – aujourd’hui · en production avec le premier client',
+      meta: 'Perto Plataforma · sept. 2026 – aujourd’hui · en production',
       statement: ['Un filtre oublié dans le code', 'ne fait pas fuiter de données.'],
       layers: [
         { label: 'Couche 1 · Application', text: 'Le client vient du jeton, jamais d’un en-tête.' },

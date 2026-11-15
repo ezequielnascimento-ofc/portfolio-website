@@ -74,7 +74,7 @@ export default function CaseAscesUnita() {
 
       <Section id="testes" n="06" title={s.testes}>
         <p className="case-p">{t.intro}</p>
-        <div className="load-table-wrap">
+        <div className="load-table-wrap" tabIndex={0} role="region" aria-label={t.tableLabel}>
           <table className="load-table">
             <caption className="sr-only">{t.tableLabel}</caption>
             <thead className="mono">
@@ -121,6 +121,7 @@ export default function CaseAscesUnita() {
             ))}
           </ul>
         </div>
+        <p className="case-p">{c.result.deploy}</p>
         <div className="case-stack case-stack--plain">
           <span className="label mono">{c.result.othersLabel}</span>
           <div className="others">

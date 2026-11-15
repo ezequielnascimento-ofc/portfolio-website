@@ -20,14 +20,14 @@ const pt = {
   counter: 'Estudo de caso · 02 de 03',
   number: '02',
   title: 'Agenda Perto',
-  meta_line: 'Perto Plataforma · set/2026 – atual · em produção com o primeiro cliente',
+  meta_line: 'Perto Plataforma · set/2026 – atual · em produção',
   statement: ['Um filtro esquecido no código', 'não vaza dados.'],
   lead:
     'Um SaaS de acompanhamento infantil: a equipe registra a rotina da criança e a família acompanha pelo celular. Cada espaço de educação infantil é um cliente, e o próprio banco garante que um não veja os dados do outro.',
   facts: [
     { label: 'Papel', value: 'Arquitetura, backend, frontend, banco, infraestrutura e pipeline' },
     { label: 'Período', value: 'set/2026 – atual' },
-    { label: 'Status', value: 'Em produção com o primeiro cliente', live: true },
+    { label: 'Status', value: 'Em produção desde out/2026', live: true },
     { label: 'Stack', value: 'Java 21 · Spring Boot 4 · Angular 22 · PostgreSQL 16' },
   ],
   metrics: [
@@ -116,13 +116,13 @@ const pt = {
     ],
   },
   result: {
-    statement: ['Em produção com o primeiro cliente.', 'Cada versão passa pelo mesmo portão antes de chegar às famílias.'],
+    statement: ['Em produção desde out/2026.', 'Cada versão passa pelo mesmo portão antes de chegar às famílias.'],
     metrics: [
       { value: '1 mês', label: 'do primeiro commit à v1.0.0', accent: true },
       { value: '24', label: 'versões, da v1.0.0 à v1.7.1' },
       { value: '4', label: 'perfis, cada um com o seu escopo' },
     ],
-    note: 'O nome do espaço em produção e os números de uso não são publicados.',
+    note: 'Os números de uso não são publicados.',
   },
   next: {
     planned: 'previsto',
@@ -154,14 +154,14 @@ const en = {
   counter: 'Case study · 02 of 03',
   number: '02',
   title: 'Agenda Perto',
-  meta_line: 'Perto Plataforma · Sep 2026 – present · in production with its first client',
+  meta_line: 'Perto Plataforma · Sep 2026 – present · in production',
   statement: ['A filter forgotten in the code', 'does not leak data.'],
   lead:
     'A childcare SaaS: staff log each child’s routine and families follow along on their phones. Every early-childhood center is a client, and the database itself guarantees that one never sees another’s data.',
   facts: [
     { label: 'Role', value: 'Architecture, backend, frontend, database, infrastructure and pipeline' },
     { label: 'Period', value: 'Sep 2026 – present' },
-    { label: 'Status', value: 'In production with the first client', live: true },
+    { label: 'Status', value: 'In production since Oct 2026', live: true },
     { label: 'Stack', value: 'Java 21 · Spring Boot 4 · Angular 22 · PostgreSQL 16' },
   ],
   metrics: [
@@ -250,13 +250,13 @@ const en = {
     ],
   },
   result: {
-    statement: ['In production with the first client.', 'Every release goes through the same gate before reaching families.'],
+    statement: ['In production since Oct 2026.', 'Every release goes through the same gate before reaching families.'],
     metrics: [
       { value: '1 month', label: 'from first commit to v1.0.0', accent: true },
       { value: '24', label: 'releases, from v1.0.0 to v1.7.1' },
       { value: '4', label: 'roles, each with its own scope' },
     ],
-    note: 'The name of the center in production and usage numbers are not published.',
+    note: 'Usage numbers are not published.',
   },
   next: {
     planned: 'planned',

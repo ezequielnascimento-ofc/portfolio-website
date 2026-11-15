@@ -18,9 +18,9 @@ const pt = {
   lead:
     'Sistemas de um centro universitário, com foco no Vestibular Portal: o candidato consulta o local de prova e o resultado só com CPF e data de nascimento, e o CPF fica protegido em cada camada.',
   facts: [
-    { label: 'Cargo', value: 'Técnico de Suporte (Desenvolvimento e Infraestrutura)' },
+    { label: 'Papel', value: 'Desenvolvimento do sistema completo, implantação e suporte' },
     { label: 'Período', value: 'jul/2025 – atual' },
-    { label: 'Status', value: 'Vestibular Portal em produção', live: true },
+    { label: 'Status', value: 'Em produção desde out/2026, hoje na etapa de resultado', live: true },
     { label: 'Stack', value: 'Java 21 · Spring Boot 3 · React 19 · PostgreSQL 17 · Redis 8' },
   ],
   metrics: [
@@ -126,14 +126,16 @@ const pt = {
   },
   result: {
     statement: ['Em produção na Asces-Unita.', 'Candidatos consultam local de prova e resultado sem que o CPF saia da API.'],
-    liveLabel: 'No ar no Vestibular Portal',
+    liveLabel: 'Etapas no ar, nesta ordem',
     live: [
-      'consulta do local de prova',
-      'gabarito oficial e PDF da prova',
-      'resultado com notas, situação e classificação',
+      '1 · consulta do local de prova',
+      '2 · gabarito oficial e PDF da prova',
+      '3 · resultado com notas, situação e classificação (atual)',
       'orientação de matrícula conforme a situação',
       'painel: importação validada e etapas com horário',
     ],
+    deploy:
+      'A equipe de infraestrutura entregou o servidor Linux. Preparei o projeto no servidor, subi os contêineres e fiz a manutenção e o suporte durante cada etapa.',
     othersLabel: 'Outros sistemas na mesma instituição',
     others: {
       bolsa: ['Bolsa Social', '99,88%', 'de execuções sem erro, em mais de 6.000 no período de inscrições. Google Apps Script, sem servidor para manter.'],
@@ -176,9 +178,9 @@ const en = {
   lead:
     'Systems for a university center, focused on the Vestibular Portal: applicants look up their exam location and result with only their ID number (CPF) and birth date, and the CPF is protected at every layer.',
   facts: [
-    { label: 'Position', value: 'Support Technician (Development and Infrastructure)' },
+    { label: 'Role', value: 'Built the whole system, deployment and support' },
     { label: 'Period', value: 'Jul 2025 – present' },
-    { label: 'Status', value: 'Vestibular Portal in production', live: true },
+    { label: 'Status', value: 'In production since Oct 2026, now in the result phase', live: true },
     { label: 'Stack', value: 'Java 21 · Spring Boot 3 · React 19 · PostgreSQL 17 · Redis 8' },
   ],
   metrics: [
@@ -284,14 +286,16 @@ const en = {
   },
   result: {
     statement: ['In production at Asces-Unita.', 'Applicants look up their exam location and result without the CPF ever leaving the API.'],
-    liveLabel: 'Live on the Vestibular Portal',
+    liveLabel: 'Phases released, in this order',
     live: [
-      'exam location lookup',
-      'official answer key and exam PDF',
-      'result with scores, status and ranking',
+      '1 · exam location lookup',
+      '2 · official answer key and exam PDF',
+      '3 · result with scores, status and ranking (current)',
       'enrollment guidance based on the status',
       'admin: validated imports and timed phases',
     ],
+    deploy:
+      'The infrastructure team handed over the Linux server. I prepared the project on the server, brought up the containers and handled maintenance and support through each phase.',
     othersLabel: 'Other systems at the same institution',
     others: {
       bolsa: ['Social Scholarship', '99.88%', 'error-free executions, out of more than 6,000 during the application period. Google Apps Script, with no server to maintain.'],

@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         plataformaMcp: resolve(import.meta.dirname, 'casos/plataforma-mcp/index.html'),
+        agendaPerto: resolve(import.meta.dirname, 'casos/agenda-perto/index.html'),
       },
     },
   },

@@ -132,11 +132,12 @@ const pt = {
     stack: ['Node.js', 'JavaScript com JSDoc', 'MCP sobre HTTP', 'OAuth', 'PostgreSQL', 'Docker', 'Linux', 'Testes unitários', 'Claude Code'],
   },
   nextCase: {
-    kicker: 'Próximo estudo de caso · em breve',
+    kicker: 'Próximo estudo de caso',
     number: '02',
     title: 'Agenda Perto',
     statement: ['Um filtro esquecido no código', 'não vaza dados.'],
-    cta: 'Ver todos os projetos',
+    cta: 'Ler estudo de caso',
+    href: '/casos/agenda-perto/',
   },
 }
 
@@ -269,11 +270,12 @@ const en = {
     stack: ['Node.js', 'JavaScript with JSDoc', 'MCP over HTTP', 'OAuth', 'PostgreSQL', 'Docker', 'Linux', 'Unit tests', 'Claude Code'],
   },
   nextCase: {
-    kicker: 'Next case study · coming soon',
+    kicker: 'Next case study',
     number: '02',
     title: 'Agenda Perto',
-    statement: ['A filter forgotten in the code', 'doesn’t leak data.'],
-    cta: 'See all projects',
+    statement: ['A filter forgotten in the code', 'does not leak data.'],
+    cta: 'Read case study',
+    href: '/casos/agenda-perto/',
   },
 }
 

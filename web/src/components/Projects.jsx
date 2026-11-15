@@ -124,7 +124,7 @@ function Perto() {
           <p className="mono">
             {p.footnote} · {STACKS.perto}
           </p>
-          <CaseStudyButton variant="dark" />
+          <CaseStudyButton variant="dark" href="/casos/agenda-perto/" />
         </div>
       </div>
     </section>
